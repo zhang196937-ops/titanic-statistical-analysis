@@ -5,7 +5,7 @@
 Statistical analysis of Titanic survival data using principles from **OpenIntro Statistics (4th Edition)**.
 
 ## Project Structure
-titanic-statistical-analysis/
+titanic-statistical-analysis///
 ├── data/#Raw(ignored)+processed datasets
 
 ├── notebooks/#Numbered analysis workflow(Ch1-Ch9)
