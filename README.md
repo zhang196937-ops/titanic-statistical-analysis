@@ -6,11 +6,15 @@ Statistical analysis of Titanic survival data using principles from **OpenIntro 
 
 ## Project Structure
 titanic-statistical-analysis/
-├── data/
-├── notebooks/
-├── src/
-├── reports/
-└── references/
+├── data/#Raw(ignored)+processed datasets
+
+├── notebooks/#Numbered analysis workflow(Ch1-Ch9)
+
+├── src/#Reusable stattistical functions
+
+├── reports/#Formal statistical report + figures
+
+└── references/#OpenInfo citations & academic integrity
 
 ## License
 MIT © zhang196937-ops
