@@ -1,0 +1,11 @@
+name: titanic-statistical-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.9
+  - pandas
+  - numpy
+  - seaborn
+  - matplotlib
+  - scikit-learn
+  - jupyter
