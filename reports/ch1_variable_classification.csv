@@ -1,0 +1,16 @@
+Column,Dtype,Role,Unique Values,Unique Sample (first 5),Missing %
+survived,int64,Response (Y),2,"0, 1",0.0
+pclass,int64,Explanatory (X),3,"3, 1, 2",0.0
+sex,object,Explanatory (X),2,"male, female",0.0
+age,float64,Explanatory (X),88,"22.0, 38.0, 26.0, 35.0, 54.0",19.9
+sibsp,int64,Explanatory (X),7,"1, 0, 3, 4, 2",0.0
+parch,int64,Explanatory (X),7,"0, 1, 2, 5, 3",0.0
+fare,float64,Explanatory (X),248,"7.25, 71.2833, 7.925, 53.1, 8.05",0.0
+embarked,object,Explanatory (X),3,"S, C, Q",0.2
+class,category,Explanatory (X),3,"Third, First, Second",0.0
+who,object,Explanatory (X),3,"man, woman, child",0.0
+adult_male,bool,Explanatory (X),2,"True, False",0.0
+deck,category,Explanatory (X),7,"C, E, G, D, A",77.2
+embark_town,object,Explanatory (X),3,"Southampton, Cherbourg, Queenstown",0.2
+alive,object,Explanatory (X),2,"no, yes",0.0
+alone,bool,Explanatory (X),2,"False, True",0.0
