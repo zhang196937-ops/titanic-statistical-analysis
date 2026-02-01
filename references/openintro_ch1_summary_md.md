@@ -1,74 +1,70 @@
 # OpenIntro Statistics (4th Ed) — Chapter 1 Summary  
-## Introduction to Data / Introduction aux données / 数据基础
+## Introduction to Data / Introduction aux données
 
 > **Source**: Diez, D. M., Barr, C. D., & Çetinkaya-Rundel, M. (2019). *OpenIntro Statistics* (4th ed.)  
 > **Notebook**: `notebooks/01_data_understanding.ipynb`
 
 ---
 
-## Core Concepts / Concepts clés / 核心概念
+## Core Concepts / Concepts clés 
 
-### 1.1 Basic Terminology / Terminologie de base / 基础术语
-
-| English | Français | 中文 | Definition |
-|---------|----------|------|------------|
-| **Observation** | Observation / Individu | 观测值/样本 | A row in the dataset representing a single entity (e.g., one passenger) | Donnée individuelle représentant une entité unique (ex: un passager) | 数据集的**每一行**，代表一个独立实体（如：一名乘客） |
-| **Variable** | Variable | 变量 | A column representing a characteristic (e.g., age, sex) | Colonne représentant une caractéristique (ex: âge, sexe) | 数据集的**每一列**，代表一个特征（如：年龄、性别） |
-| **Data Matrix** | Matrice de données | 数据矩阵 | Table structure: rows = observations, columns = variables | Structure tabulaire : lignes = observations, colonnes = variables | 行=观测值，列=变量的表格结构 |
+### 1.1 Basic Terminology / Terminologie de base 
+| English | Français | Definition |
+|---------|----------|------|
+| Observation| Observation / Individu | A row in the dataset representing a single entity (e.g., one passenger)/Donnée individuelle représentant une entité unique (ex: un passager) | 
+| Variable| Variable |A column representing a characteristic (e.g., age, sex)/ Colonne représentant une caractéristique (ex: âge, sexe) |
+| Data Matrix| Matrice de données|Table structure: rows = observations, columns = variables / Structure tabulaire : lignes = observations, colonnes = variables | 
 
 ---
 
-### 1.2 Types of Variables / Types de variables / 变量类型
+### 1.2 Types of Variables / Types de variables
 
-#### Categorical Variables / Variables catégorielles / 分类型变量
+#### Categorical Variables / Variables catégorielles
 
-| Subtype | English | Français | 中文 | Titanic Example |
-|---------|---------|----------|------|-----------------|
-| **Nominal** | Nominal | Nominale | 名义型 | `sex` (male/female), `embarked` (C/Q/S) |
-| **Ordinal** | Ordinal | Ordinale | 有序型 | `pclass` (1st > 2nd > 3rd), `class` |
+| Subtype | English | Français | Titanic Example |
+|---------|---------|----------|-----------------|
+| Nominal | Nominal | Nominale |`sex` (male/female), `embarked` (C/Q/S) |
+| Ordinal | Ordinal | Ordinale |`pclass` (1st > 2nd > 3rd), `class` |
 
-> **Note pratique / Practical Note / 实践说明**:  
+> **Note pratique / Practical Note**:  
 > Variables nominales : pas d'ordre intrinsèque (sexe)  
 > Variables ordinales : ordre logique significatif (classe de cabine)  
 > Nominal variables: no inherent order (sex)  
 > Ordinal variables: meaningful logical order (cabin class)  
-> 名义型：无内在顺序（性别）  
-> 有序型：有逻辑顺序（舱位等级 1>2>3）
 
-#### Numerical Variables / Variables numériques / 数值型变量
+#### Numerical Variables / Variables numériques
 
-| Subtype | English | Français | 中文 | Titanic Example |
-|---------|---------|----------|------|-----------------|
-| **Discrete** | Discrete | Discrète | 离散型 | `sibsp` (0,1,2...), `parch` |
-| **Continuous** | Continuous | Continue | 连续型 | `age` (22.0, 38.5...), `fare` |
+| Subtype | English | Français | Titanic Example |
+|---------|---------|----------|-----------------|
+| Discrete | Discrete | Discrète | `sibsp` (0,1,2...), `parch` |
+| Continuous | Continuous | Continue | `age` (22.0, 38.5...), `fare` |
 
-> **Critical Insight / Insight critique / 关键洞察**:  
+> **Critical Insight / Insight critique**:  
 > EN: `age` is mathematically discrete (years) but **treated as continuous** in practice due to dense values (88 unique) + decimals  
 > FR: `age` est mathématiquement discret (années) mais **traité comme continu** car valeurs denses (88 uniques) + décimales  
-> ZH: `age` 数学上是离散的（年为单位），但因取值密集（88个唯一值）+ 含小数 → **实践中视为连续型**
 
 ---
 
-### 1.3 Explanatory vs. Response Variables / Variables explicatives vs réponse / 解释变量 vs 响应变量
+### 1.3 Explanatory vs. Response Variables / Variables explicatives vs réponse
 
-| Role | English | Français | 中文 | Titanic Example |
-|------|---------|----------|------|-----------------|
-| **Response** | Response Variable | Variable réponse | 响应变量 | `survived` (0/1) — target to predict |
-| **Explanatory** | Explanatory Variable | Variable explicative | 解释变量 | `pclass`, `sex`, `age` — predictors |
+| Role | English | Français | Titanic Example |
+|------|---------|----------|-----------------|
+| Response | Response Variable | Variable réponse | `survived` (0/1) — target to predict |
+| Explanatory | Explanatory Variable | Variable explicative | `pclass`, `sex`, `age` — predictors |
 
-> **Golden Rule / Règle d'or / 黄金法则**:  
+> **Golden Rule / Règle d'or**:  
 > EN: Always identify Y (response) before X (explanatory) — confusion leads to wrong analysis  
 > FR: Toujours identifier Y (réponse) avant X (explicative) — confusion mène à une mauvaise analyse  
 > ZH: 建模前必须明确 Y（响应）和 X（解释）—— 混淆角色导致错误分析
 
 ---
 
-### 1.4 Types of Studies / Types d'études / 研究类型
+### 1.4 Types of Studies / Types d'études 
 
-| Type | English | Français | 中文 | Causal Inference? |
-|------|---------|----------|------|-------------------|
-| **Observational** | Observational Study | Étude observationnelle | 观察性研究 | ❌ Association only |
-| **Experiment** | Experiment | Expérience contrôlée | 实验 | ✅ Causation possible |
+| Type | English | Français | Causal Inference? |
+|------|---------|----------|-------------------|
+| Observational| Observational Study | Étude observationnelle | Association only |
+| Experiment | Experiment | Expérience contrôlée | Causation possible |
 
 > **Critical Limitation / Limitation critique / 关键局限**:  
 > EN: Observational studies show **association ≠ causation** (e.g., "1st class → survival" may reflect cabin location, not ticket price)  
@@ -81,7 +77,7 @@
 
 | Bias | English | Français | 中文 | Titanic Example |
 |------|---------|----------|------|-----------------|
-| **Survivorship** | Survivorship Bias | Biais de survivant | 幸存者偏差 | Only boarded passengers observed (no cancellations) |
+| Survivorship | Survivorship Bias | Biais de survivant | 幸存者偏差 | Only boarded passengers observed (no cancellations) |
 
 > **Why it matters / Pourquoi c'est important / 为何重要**:  
 > EN: Overestimates survival probability; limits generalizability  
@@ -94,9 +90,9 @@
 
 | Principle | English | Français | 中文 |
 |-----------|---------|----------|------|
-| **1** | "Variable type determines analysis method" | "Le type de variable détermine la méthode d'analyse" | "变量类型决定分析方法" |
-| **2** | "Association ≠ Causation in observational studies" | "Association ≠ Causalité dans les études observationnelles" | "观察性研究中关联≠因果" |
-| **3** | "Always acknowledge data limitations" | "Toujours reconnaître les limites des données" | "始终承认数据局限性" |
+| 1 | "Variable type determines analysis method" | "Le type de variable détermine la méthode d'analyse" | "变量类型决定分析方法" |
+| 2 | "Association ≠ Causation in observational studies" | "Association ≠ Causalité dans les études observationnelles" | "观察性研究中关联≠因果" |
+| 3 | "Always acknowledge data limitations" | "Toujours reconnaître les limites des données" | "始终承认数据局限性" |
 
 ---
 
@@ -122,3 +118,43 @@
 | Confounding | Confounding variable | Variable de confusion | 混杂变量 |
 | Association | Association | Association | 关联 |
 | Causation | Causation | Causalité | 因果 |
+
+
+## ✅ Chapter 1 Summary: Key Concepts You Must Understand
+
+### 🔑 Core Principles (OpenIntro Ch 1)
+| Concept | English | Français | 中文 | Why It Matters |
+|---------|---------|----------|------|----------------|
+| Observation | Row = single entity | Ligne = entité unique | 行 = 单个实体 | Foundation of data structure |
+| Variable | Column = characteristic | Colonne = caractéristique | 列 = 特征 | Determines analysis method |
+| Categorical | Nominal/Ordinal/Binary | Nominale/Ordinale/Binaire | 名义/有序/二元 | Use frequency tables, bar plots |
+| Numerical | Discrete/Continuous | Discrète/Continue | 离散/连续 | Use mean/median, histograms |
+| Response (Y) | Target to predict | Cible à prédire | 预测目标 | Always identify FIRST |
+| Explanatory (X) | Predictors | Prédicteurs | 预测变量 | Used to explain Y |
+| Observational Study | No intervention | Pas d'intervention | 无干预 | → **Association ≠ Causation** |
+| Confounding | Hidden variable affects X & Y | Variable cachée | 混杂变量 | Explains spurious associations |
+| Bias | Systematic error | Erreur systématique | 偏差 | Limits generalizability |
+
+### ⚠️ Critical Mistakes to Avoid
+1. ❌ Using mean for categorical variables → meaningless  
+   ✅ Use **frequency/proportion** instead
+2. ❌ Claiming causation from observational data → unethical  
+   ✅ State findings as **association** only
+3. ❌ Ignoring missing data → biased results  
+   ✅ Always report missingness % and handling strategy
+4. ❌ Confusing observation (row) vs variable (column) → analysis errors  
+   ✅ Visualize data matrix structure first
+
+### 🔗 Next Steps (Chapter 2 Preview)
+- Chapter 2: Summarizing Data → Mean/Median/IQR for numerical variables
+- Chapter 2: Box plots for outlier detection
+- Chapter 3: Conditional probability `P(survive | female)`
+
+
+
+
+
+
+
+
+
