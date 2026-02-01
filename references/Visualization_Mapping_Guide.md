@@ -1,12 +1,11 @@
-# 变量类型与可视化图表映射指南
-## Variable Type → Visualization Mapping Guide
+# Variable Type → Visualization Mapping Guide
 
-> 📚 **依据**: OpenIntro Statistics 4th Ed, Ch 1-2  
-> 💡 **核心原则**: *"Match chart type to variable type — mismatched charts mislead interpretation"*
+> **Source**: OpenIntro Statistics 4th Ed, Ch 1-2  
+> **Core principal**: *"Match chart type to variable type — mismatched charts mislead interpretation"*
 
-## 📊 推荐映射表
+## Mapping Table
 
-| 变量类型 | 英文 | 中文 | 推荐图表 | Seaborn 函数 | Titanic 示例 |
+| Type Variable | 英文 | 中文 | Mapping chart | Seaborn function | Titanic example |
 |----------|------|------|----------|--------------|--------------|
 | **Binary** | Categorical-Binary | 二元分类型 | 条形图 | `countplot(x=var)` | `survived`, `alone` |
 | **Ordinal** | Categorical-Ordinal | 有序分类型 | 有序条形图 | `countplot(x=var, order=[...])` | `pclass` (order=[1,2,3]) |
@@ -14,7 +13,7 @@
 | **Discrete** | Numerical-Discrete | 离散数值型 | 条形图 (唯一值≤10) | `countplot(x=var)` | `sibsp`, `parch` |
 | **Continuous** | Numerical-Continuous | 连续数值型 | 直方图 + 箱线图 | `histplot(x=var)` + `boxplot(y=var)` | `age`, `fare` |
 
-## ⚠️ 常见错误
+## Mistakes
 
 | 错误做法 | 问题 | 正确做法 |
 |----------|------|----------|
