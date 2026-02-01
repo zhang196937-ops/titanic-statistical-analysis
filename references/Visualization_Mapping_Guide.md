@@ -5,6 +5,7 @@
 
 ## 1 Univariate Analysis (Visualizing One Variable at a time)
 >Goal:to understand the distribution,central tendency, and frequency of a single column
+
 | Variable type | Chart name | Seaborn fuction | Explanation |
 |----------|------|------|----------|
 | Categorical-Binary |Bar chart(Count)  |sns.countplot() | Shows the frequency of two outcomes (e.g., Male vs Female). |
@@ -28,6 +29,7 @@
 
 ## 3. Multivariate Analysis (Adding a 3rd Variable)##
 >Goal: To see how a third factor (often Binary) affects a relationship.
+
 | Variable type | Chart name | Seaborn function |Explanation|
 |----------|------|----------|----------|
 |Multiple Variables|Clustered Bar Chart|sns.countplot(hue=...)|Compares groups within groups (e.g., Survival counts split by Sex).|
