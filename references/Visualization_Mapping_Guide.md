@@ -3,21 +3,45 @@
 > **Source**: OpenIntro Statistics 4th Ed, Ch 1-2  
 > **Core principal**: *"Match chart type to variable type — mismatched charts mislead interpretation"*
 
-## Mapping Table
+## 1 Univariate Analysis (Visualizing One Variable at a time)
+>Goal:to understand the distribution,central tendency, and frequency of a single column
+| Variable type | Chart name | Seaborn fuction | Explanation |
+|----------|------|------|----------|
+| Categorical-Binary |Bar chart(Count)  |sns.countplot() | Shows the frequency of two outcomes (e.g., Male vs Female). |
+| Categorical-Nominal |Bar chart(Count)| sns.countplot()|Shows the count for each category. No natural order (e.g., Port S, C, Q).|
+| Categorical-Ordinal |Ordered Bar chart|sns.countplot()|Shows counts while maintaining the rank (e.g., Class 1 > 2 > 3).|
+|Numerical-Discrete|Frequency Plot|sns.histplot()|Shows how often specific whole numbers occur (e.g., # of Siblings).|
+|Numerical-Continuous|Histogram|sns.histplot()|Groups data into "bins" to show the shape of the distribution (Skewed/Symmetric).|
+|Numerical-Continuous|Boxplot|sns.boxplot()|Visualizes the Median, Quartiles, and detects Outliers.|
+|Numerical-Continuous|Density Plot|sns.kdeplot()|Provides a smooth curve showing where values are most concentrated.|
 
-| Type Variable | 英文 | 中文 | Mapping chart | Seaborn function | Titanic example |
-|----------|------|------|----------|--------------|--------------|
-| **Binary** | Categorical-Binary | 二元分类型 | 条形图 | `countplot(x=var)` | `survived`, `alone` |
-| **Ordinal** | Categorical-Ordinal | 有序分类型 | 有序条形图 | `countplot(x=var, order=[...])` | `pclass` (order=[1,2,3]) |
-| **Nominal** | Categorical-Nominal | 名义分类型 | 条形图 | `countplot(x=var)` | `sex`, `embarked` |
-| **Discrete** | Numerical-Discrete | 离散数值型 | 条形图 (唯一值≤10) | `countplot(x=var)` | `sibsp`, `parch` |
-| **Continuous** | Numerical-Continuous | 连续数值型 | 直方图 + 箱线图 | `histplot(x=var)` + `boxplot(y=var)` | `age`, `fare` |
 
-## Mistakes
+## 2.Bivariate Analysis (Visualizing the Relationship between Two Variables)
+>Goal: To see if one variable(variables explanatary) influences another(variable response) (Association vs. Causation).
 
-| 错误做法 | 问题 | 正确做法 |
-|----------|------|----------|
-| 用直方图展示 `sex` | 无意义分箱 | → 条形图 (`countplot`) |
-| 用条形图展示 `age` | 200+个条形 → 信息过载 | → 直方图 (`histplot`) |
-| `pclass` 不指定 `order` | 按字母序 (3rd,1st,2nd) → 掩盖趋势 | → `order=[1,2,3]` |
-| 仅用直方图展示 `fare` | 难以识别异常值 | → 直方图 + 箱线图组合 |
+| Variable type | Chart name | Seaborn function |Explanation|
+|----------|------|----------|----------|
+| Numerical vs Numerical | Scatter Plot | sns.scatterplot() |Checks for correlation or patterns between two numbers (e.g., Age vs. Fare).|
+|Categorical vs. Numerical|Boxplot|sns.boxplot()|Compares the distribution of a number across groups (e.g., Age by Sex).|
+|Categorical vs. Numerical|Bar Chart (Mean)|sns.barplot()|Shows the average value for each category (e.g., Average Fare per Class).|
+|Categorical vs. Categorical|Heatmap|sns.heatmap()|Visualizes a "Contingency Table" to see overlap (e.g., Class vs. Survival).|
+
+## 3. Multivariate Analysis (Adding a 3rd Variable)##
+>Goal: To see how a third factor (often Binary) affects a relationship.
+| Variable type | Chart name | Seaborn function |Explanation|
+|----------|------|----------|----------|
+|Multiple Variables|Clustered Bar Chart|sns.countplot(hue=...)|Compares groups within groups (e.g., Survival counts split by Sex).|
+|Multiple Variables|Faceted Boxplot|sns.boxplot(hue=...)|Sees how a grouping variable shifts the median (e.g., Age vs Class, colored by Sex).|
+|Entire Dataset|Pair Plot|sns.pairplot()|Generates a grid of charts for every numerical pair in the data at once.|
+
+
+
+
+
+
+
+
+
+
+
+
