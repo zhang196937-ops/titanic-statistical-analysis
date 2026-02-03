@@ -2,8 +2,7 @@
 ## Introduction to Data / Introduction aux données
 
 > **Source**: Diez, D. M., Barr, C. D., & Çetinkaya-Rundel, M. (2019). *OpenIntro Statistics* (4th ed.)  
-> **Notebook**: `notebooks/01_data_understanding.ipynb`
-
+> **Notebook**: [01_data_understanding.ipynb](../notebooks/01_data_understanding.ipynb)
 ---
 
 ## Core Concepts / Concepts clés 
