@@ -18,7 +18,10 @@ titanic-statistical-analysis/
 ├── notebooks/#Numbered analysis workflow(Ch1-Ch9)
 ├── src/#Reusable stattistical functions
 ├── reports/#Formal statistical report + figures
-└── references/#OpenInfo citations & academic integrity
+├── references/#OpenInfo citations & academic integrity
+├── .gitignore
+├── README.md
+└── LICENSE
 ```
 ## 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details#.
