@@ -9,6 +9,7 @@ Statistical analysis of Titanic survival data using principles from **OpenIntro 
 - **Pandas:** 2.3.3
 - **Seaborn:** 0.13.2
 - **Matplotlib:** 3.10.6
+- **OpenIntro Statistics:** 4th Edition
 
 ## 📁 Project Structure
 titanic-statistical-analysis/ 
