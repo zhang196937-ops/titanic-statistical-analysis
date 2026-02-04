@@ -20,6 +20,7 @@ titanic-statistical-analysis/
 ├── reports/#Formal statistical report + figures
 ├── references/#OpenInfo citations & academic integrity
 ├── .gitignore
+├── environment.yml
 ├── README.md
 └── LICENSE
 ```
