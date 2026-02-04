@@ -17,6 +17,7 @@ titanic-statistical-analysis/
 
 └── references/#OpenInfo citations & academic integrity
 ``` 
-
-## License
-MIT © zhang196937-ops
+## 📝 License
+This project is licensed under the MIT License - see the LICENSE file for details#.
+## 👨‍💻 Author
+Wei ZHANG - [@zhang196937-ops](https://github.com/zhang196937-ops)
