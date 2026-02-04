@@ -1,22 +1,24 @@
 # Titanic Statistical Analysis
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 Statistical analysis of Titanic survival data using principles from **OpenIntro Statistics (4th Edition)**.
 
-## Project Structure
-titanic-statistical-analysis/
-``` 
+## 🎯 Project Goals
+- Integrating Data Science Workflows with Python
+
+## 🛠️ Tech Stack
+- **Numpy:** 2.3.5
+- **Pandas:** 2.3.3
+- **Seaborn:** 0.13.2
+- **Matplotlib:** 3.10.6
+
+## 📁 Project Structure
+titanic-statistical-analysis/ 
+```
 ├── data/#Raw(ignored)+processed datasets
-
 ├── notebooks/#Numbered analysis workflow(Ch1-Ch9)
-
 ├── src/#Reusable stattistical functions
-
 ├── reports/#Formal statistical report + figures
-
 └── references/#OpenInfo citations & academic integrity
-``` 
+```
 ## 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details#.
 ## 👨‍💻 Author
