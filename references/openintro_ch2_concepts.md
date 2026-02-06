@@ -219,7 +219,7 @@ max_age = outliers['age'].max()         # 80.0 years
 |Bimodal|Report both modes|Range|Histogram (two peaks)|Hypothetical salary data → modes at $3k & $6k|
 
 ### Titanic Decision Tree（泰坦尼克号决策树）
-
+```
 Start: Summarize numerical variable
 │
 ├─ Is distribution symmetric? (|skewness| < 0.5)
@@ -236,7 +236,7 @@ Start: Summarize numerical variable
 │                   │        Example: fare → median=£14.45, IQR=£23.09, 78 outliers >£65.64
 │                   │
 │                   └─ NO → Use MEDIAN + IQR
-
+```
 ### Why This Matters（为什么重要） 
 >EN: Using mean/std dev for skewed fare suggests "typical fare = £32.20" — misleading because 75% paid ≤ £31.00. Median (£14.45) correctly states "half paid ≤ £14.45".
 >FR: Utiliser moyenne/écart-type pour fare asymétrique suggère "tarif typique = £32.20" — trompeur car 75% ont payé ≤ £31.00. La médiane (£14.45) indique correctement "la moitié a payé ≤ £14.45".
