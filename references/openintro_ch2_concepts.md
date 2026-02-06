@@ -70,7 +70,7 @@ $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
 ### Formulas & Rules（公式与规则）
 
 #### Range（极差）
-- 最大值 - 最小值
+- Max(最大值) - Min(最小值)
 - **缺点**: 仅依赖两个极端值，**对异常值极度敏感**
 
 #### Variance & Standard Deviation（方差与标准差）
@@ -82,7 +82,7 @@ $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
 #### IQR（四分位距）
 - $Q_1$ = 25th percentile（第25百分位数）
 - $Q_3$ = 75th percentile（第75百分位数）
-- **IQR = $Q_3 - Q_1$**
+- **IQR = $Q_3 - Q_1$ (outlier value)**
 - **适用条件**: 偏斜分布或含异常值（与中位数配套使用）
 - **稳健性**: **对异常值不敏感**（仅依赖中间50%数据）
 
