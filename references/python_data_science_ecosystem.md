@@ -69,7 +69,7 @@
 | **核心对象** | `ndarray` (N-dimensional array) — 同质多维数组 |
 | **核心优势** | • 向量化计算（比 Python 循环快 10-100 倍）<br>• 内存连续存储（CPU 缓存友好）<br>• 广播机制（broadcasting） |
 | **典型场景** | • 矩阵运算（线性代数）<br>• 图像处理（像素数组）<br>• 机器学习特征矩阵 |
-| **代码示例** | ```python<br>import numpy as np<br>a = np.array([1, 2, 3])<br>b = np.array([4, 5, 6])<br>print(a + b)  # [5 7 9] — 向量化加法，无循环``` |
+| **代码示例** | python<br>import numpy as np<br>a = np.array([1, 2, 3])<br>b = np.array([4, 5, 6])<br>print(a + b)  # [5 7 9] — 向量化加法，无循环 |
 | **何时使用** | • 需要高性能数值计算时<br>• 处理多维数组（>2维）<br>• 作为 Pandas/SciPy 的底层数据结构 |
 
 > 💡 **关键事实**:  
@@ -86,7 +86,7 @@
 | **核心对象** | `Series` (1D 带标签数组), `DataFrame` (2D 表格) |
 | **核心优势** | • 混合类型列（数值+字符串+日期）<br>• 缺失值处理（`NaN` 语义）<br>• 时间序列支持（`DatetimeIndex`）<br>• SQL 式操作（`merge`, `groupby`, `pivot_table`） |
 | **典型场景** | • CSV/Excel 数据加载与清洗<br>• 特征工程（创建新列）<br>• 分组聚合分析 |
-| **代码示例** | ```python<br>import pandas as pd<br>df = pd.read_csv('data.csv')<br>df_clean = df.dropna()  # 删除缺失值<br>survival_rate = df.groupby('pclass')['survived'].mean()``` |
+| **代码示例** | python<br>import pandas as pd<br>df = pd.read_csv('data.csv')<br>df_clean = df.dropna()  # 删除缺失值<br>survival_rate = df.groupby('pclass')['survived'].mean() |
 | **何时使用** | • **90% 的数据探索/清洗任务**<br>• 需要处理带标签的表格数据时 |
 
 > ⚠️ **与 NumPy 关系**:  
@@ -105,7 +105,7 @@
 | **核心对象** | `Figure` (画布), `Axes` (坐标系) |
 | **核心优势** | • 完全控制图表每个元素（刻度/标签/颜色）<br>• 出版级质量输出（PDF/SVG）<br>• 所有高级库的底层引擎（Seaborn/Plotly 基于它） |
 | **典型场景** | • 需要精细定制图表时<br>• 学术论文/出版物图表 |
-| **代码示例** | ```python<br>import matplotlib.pyplot as plt<br>fig, ax = plt.subplots()<br>ax.plot([1,2,3], [4,5,6])<br>ax.set_title('Custom Plot')<br>ax.set_xlabel('X')<br>ax.set_ylabel('Y')<br>plt.show()``` |
+| **代码示例** | python<br>import matplotlib.pyplot as plt<br>fig, ax = plt.subplots()<br>ax.plot([1,2,3], [4,5,6])<br>ax.set_title('Custom Plot')<br>ax.set_xlabel('X')<br>ax.set_ylabel('Y')<br>plt.show()|
 | **何时使用** | • 需要完全控制图表样式时<br>• Seaborn 无法满足需求时（回退方案） |
 
 > 💡 **关键事实**:  
@@ -120,7 +120,7 @@
 |------|------|
 | **核心优势** | • **统计学优化的默认样式**（美观配色/布局）<br>• 自动处理分组/聚合（`hue`, `col`, `row`）<br>• 内置统计图表（箱线图/小提琴图/热力图） |
 | **典型场景** | • 快速探索变量分布/关系<br>• 绘制统计摘要图（均值±置信区间）<br>• 多变量分面图（FacetGrid） |
-| **代码示例** | ```python<br>import seaborn as sns<br>sns.boxplot(data=df, x='pclass', y='age', hue='sex')<br># 1行代码 = 分组箱线图 + 自动配色 + 置信区间``` |
+| **代码示例** | python<br>import seaborn as sns<br>sns.boxplot(data=df, x='pclass', y='age', hue='sex')<br># 1行代码 = 分组箱线图 + 自动配色 + 置信区间 |
 | **何时使用** | • **探索性数据分析 (EDA) 首选**<br>• 需要快速生成统计图表时 |
 
 > ⚠️ **与 Matplotlib 关系**:  
@@ -175,7 +175,7 @@
 | **核心设计** | 统一 API: `fit()`, `predict()`, `transform()` |
 | **核心模块** | • `sklearn.linear_model` (线性模型)<br>• `sklearn.ensemble` (集成方法)<br>• `sklearn.preprocessing` (数据预处理)<br>• `sklearn.model_selection` (交叉验证) |
 | **典型场景** | • 分类/回归/聚类任务<br>• 特征缩放/编码/选择<br>• 模型评估与调参 |
-| **代码示例** | ```python<br>from sklearn.ensemble import RandomForestClassifier<br>from sklearn.model_selection import train_test_split<br><br>X = df[['age', 'fare', 'pclass']]<br>y = df['survived']<br>X_train, X_test, y_train, y_test = train_test_split(X, y)<br><br>model = RandomForestClassifier()<br>model.fit(X_train, y_train)<br>accuracy = model.score(X_test, y_test)``` |
+| **代码示例** | python<br>from sklearn.ensemble import RandomForestClassifier<br>from sklearn.model_selection import train_test_split<br><br>X = df[['age', 'fare', 'pclass']]<br>y = df['survived']<br>X_train, X_test, y_train, y_test = train_test_split(X, y)<br><br>model = RandomForestClassifier()<br>model.fit(X_train, y_train)<br>accuracy = model.score(X_test, y_test) |
 | **何时使用** | • **传统机器学习任务首选**<br>• 需要快速原型验证时 |
 
 > ⚠️ **与 Pandas/NumPy 关系**:  
