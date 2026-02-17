@@ -1,3 +1,0 @@
-variable,mean,median,mode,skewness,shape,recommended,missing
-age,29.70,28.00,24.00,0.39,Approximately symmetric,Mean (efficient for symmetric),177 (19.9%)
-fare,32.20,14.45,8.05,4.79,Right-skewed,Median (robust to skew),0 (0.0%)
