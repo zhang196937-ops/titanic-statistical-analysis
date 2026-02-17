@@ -1,0 +1,6 @@
+Concept,Key Insight
+Conditional Probability,P(surv|female)=74.2% ≠ P(female|surv)=68.1%
+Bayes Theorem,Prior 35.2% → Posterior 68.1% after survival evidence
+LLN,"Sample mean error: n=50→0.036, n=1000→0.000"
+Independence Test,"χ²=23.36, p<0.001 → sex & pclass NOT independent"
+Survivorship Bias,Survivor-only analysis: +12.3 years age bias
